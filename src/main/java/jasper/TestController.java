@@ -1,7 +1,6 @@
 package jasper;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController()
 public class TestController {
@@ -11,9 +10,15 @@ public class TestController {
         this.test = test;
     }
 
-    @GetMapping(value="test")
+    @RequestMapping(value="test", method= RequestMethod.GET)
     public String printTest(){
         return test.printTest();
     }
+
+    @RequestMapping(value="printbody", method= RequestMethod.POST)
+    public String printBody(@RequestBody User user){
+        return user.userName;
+    }
+
 
 }
