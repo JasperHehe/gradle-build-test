@@ -10,7 +10,6 @@ public class Config {
     /**
      * 使用了别名绑定bean，调用类的时候必须@Qualifier指定别名
      * 没有使用别名，直接绑定bean，类名后面的参数名要相同
-     * @return
      */
     @Bean(name = "test11")
     public Product test1(){
