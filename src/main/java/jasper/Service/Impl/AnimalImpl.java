@@ -12,13 +12,13 @@ import javax.annotation.Resource;
 public class AnimalImpl implements Animal {
 //  指定要实现的具体类的别名，单独用Resource注解或者Qualifier和Autowired同时使用
 //  @Resource(name="people2Impl")
-    @Qualifier("people2Impl1")
+    @Qualifier("peopleImpl1")
+    //@Qualifier("test22")
     @Autowired
     People people;
 
     @Override
     public int getSex(){
         return people.getSex();
-       // return 2222;
     }
 }
